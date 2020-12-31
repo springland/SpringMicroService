@@ -1,0 +1,13 @@
+version: '3.9'
+services:
+
+  database:
+    image: postgres:9.5
+    ports:
+      - "5432:5432"
+    volumes:
+      - /home/fl/data/postgres-data:/var/lib/postgresql/data
+    environment:
+      POSTGRES_USER: "postgres"
+      POSTGRES_PASSWORD: "p0stgr@s"
+      POSTGRES_DB:       "eagle_eye_local"
