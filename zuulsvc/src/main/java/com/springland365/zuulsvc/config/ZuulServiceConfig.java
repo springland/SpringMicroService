@@ -1,6 +1,7 @@
-package com.springland365.license.config;
+package com.springland365.zuulsvc.config;
 
-import com.springland365.license.utils.UserContextInterceptor;
+
+import com.springland365.zuulsvc.utils.UserContextInterceptor;
 import org.springframework.cloud.client.loadbalancer.LoadBalanced;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -10,7 +11,7 @@ import java.util.Collections;
 import java.util.List;
 
 @Configuration
-public class LicenseServiceConfig {
+public class ZuulServiceConfig {
 
     @Bean
     @LoadBalanced
@@ -26,5 +27,6 @@ public class LicenseServiceConfig {
             template.setInterceptors(interceptors);
         }
 
-        return template;    }
+        return template;
+    }
 }
